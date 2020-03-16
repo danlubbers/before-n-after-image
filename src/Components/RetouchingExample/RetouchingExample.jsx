@@ -7,15 +7,14 @@ export default function RetouchingExample() {
   const [toggle, setToggle] = useState(false);
 
   const handleClick = () => {
-    console.log('test click')
     setToggle(!toggle);
   }
 
   return (
     <div className='image-container'>
-      {toggle ?
-        <img className='retouching-before' src={before} alt="" onClick={handleClick}/> :
-        <img className='retouching-after' src={after} alt="" onClick={handleClick}/>
+      {toggle 
+        ? <img className='retouching-before' src={before} alt="" onClick={handleClick}/> 
+        : <img className='retouching-after' src={after} alt="" onClick={handleClick}/>
       }
     </div>
   )
